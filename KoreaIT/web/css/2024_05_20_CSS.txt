@@ -59,3 +59,175 @@ CSS 선택자는 HTML 문서 내에서 스타일을 적용할 대상을 선택�
     <p><ins>ins 요소</ins></p>
 </body>
 </html>
+
+- id 선택자
+
+ID 선택자는 CSS에서 특정 HTML 요소를 선택하여 해당 요소에 스타일을 적용하는 데 사용되는 선택자입니다. ID는 HTML 요소에 고유한 식별자를 부여하며, 이 식별자는 CSS에서 # 기호를 사용하여 선택자로 지정됩니다.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id 선택자</title>
+    <style>
+        #container {
+            background-color: gold;
+            padding: 20px;
+            width: 500px;
+            height: 300px;
+            text-align: center;
+
+        }
+        #header {
+            background-color: deepskyblue;
+            width: 200px;
+            height: 300px;
+            text-align: center;
+            /* margin: 100px auto; */
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h2>id 선택자</h2>
+    <div id="container">div 첫번째 영역</div>
+    <div id="header">div 두번째 영역</div>
+</body>
+</html>
+
+- class 선택자
+
+CSS 클래스 선택자는 특정한 클래스를 가진 HTML 요소를 선택하여 해당 요소에 스타일을 적용하는 데 사용됩니다. 클래스는 여러 요소에 동시에 적용할 수 있으며, 동일한 클래스를 여러 요소에 사용할 수 있습니다. 클래스 선택자는 마침표(.)로 시작하며, 클래스 이름은 마침표 이후에 나옵니다.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 선택자</title>
+    <style>
+        .bigText { font-size: 50px; }
+        .smallText { font-size: 14px; }
+        .redText { color: red; }
+    </style>
+</head>
+<body>
+    <h2 class="bigText">class 선택자</h2>
+    <p><span class="smallText redText">클래스 선택자는 특정 집단의 요소를 한번에 스타일을 적용</span></p>
+    <p><span class="smallText">. 기호를 사용하여 같은 class 이름을 가진 요소에 스타일을 적용</span></p>
+</body>
+</html>
+
+- 그룹 선택자
+
+그룹 선택자는 동일한 스타일을 여러 선택자에 적용하기 위해 사용됩니다. 여러 선택자를 쉼표로 구분하여 그룹을 형성하고, 해당 그룹에 동일한 스타일을 적용할 수 있습니다. 이는 코드를 간결하게 유지하고 일관된 스타일을 적용하는 데 유용합니다.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그룹 선택자</title>
+    <style>
+        * { text-align: center; }
+        h2 { font-size: 50px; }
+        h3 { font-size: 30px; }
+        p, li { font-size: 20px; }
+        li { display: inline-block; margin-right: 40px; font-weight: bold; color: deeppink; }
+    </style>
+</head>
+<body>
+    <h2>그룹 선택자</h2>
+    <p>여러개의 요소를 나열하고 ,(콤마)로 구분하여 스타일을 적용</p>
+    <h3>선택자의 종류</h3>
+    <li>전체 선택자</li>
+    <li>요소 선택자</li>
+    <li>아이디 선택자</li>
+    <li>클래스 선택자</li>
+    <li>그룹 선택자</li>
+</body>
+</html>
+
+- 자식 자손 선택자
+
+자식 선택자(Child Selector)는 CSS에서 특정 부모 요소의 직계 자식 요소를 선택하는 선택자입니다. 자식 선택자를 사용하면 부모 요소의 직계 자식에만 스타일을 적용할 수 있습니다.
+
+자손 선택자(Descendant Selector)는 CSS에서 특정 조상 요소 내에 있는 모든 하위 요소를 선택하는 선택자입니다. 자손 선택자를 사용하면 모든 하위 요소에 스타일을 적용할 수 있습니다.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자식 자손 선택자</title>
+    <style>
+        ul > a { font-size: 30px; }
+        ul a { color: deeppink; }
+    </style>
+</head>
+<body>
+    <h2>자식 자손 선택자</h2>
+    <ul>
+        <a href="https://www.naver.com">네이버</a>
+        <li><a href="https://www.google.com">구글</a></li>
+        <li>다음</li>
+        <li><a href="https://www.nate.com">네이트</a></li>
+    </ul>
+</body>
+</html>
+
+- 일반 인접 형제 선택자
+
+일반 형제 선택자(General Sibling Selector)는 CSS에서 특정 요소의 모든 형제 요소를 선택하는 선택자입니다. 선택자를 사용하여 특정 요소의 형제 요소 중에서 특정한 형제에 스타일을 적용할 수 있습니다.
+
+인접 형제 선택자(Adjacent Sibling Selector)는 CSS에서 특정 요소의 바로 뒤에 나오는 형제 요소를 선택하는 선택자입니다. 선택자를 사용하여 특정 요소의 바로 뒤에 나오는 형제에 대해 스타일을 적용할 수 있습니다.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일반 형제 선택자</title>
+    <style>
+        p + span { color: gold; background-color: deepskyblue;}
+        h3 + p { background-color: deeppink; }
+        h3 ~ p { color: green; }
+    </style>
+</head>
+<body>
+    <h2>일반 형제 선택자</h2>
+    <div>
+        <h3>첫째</h3>
+        <p>둘째</p>
+        <a href="#">셋째</a>
+        <h4>넷째</h4>
+        <p>다섯째</p>
+        <span>여섯째</span>
+    </div>
+</body>
+</html>
+
+- 속성 선택자
+
+속성 선택자(Attribute Selector)는 특정 HTML 요소가 특정 속성을 가지고 있는지 여부에 따라 해당 요소를 선택하는 CSS 선택자입니다. 속성 선택자는 대괄호 [] 안에 속성 이름과 속성 값 또는 일치하는 부분을 지정하여 사용됩니다.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자</title>
+    <style>
+        [href] { text-decoration: none; color: deeppink; }
+        .attr { background-color: gold; }
+        [class='attr'] { font-size: 30px; }
+        [title] { text-align: center; font-size: 50px;}
+    </style>
+</head>
+<body>
+    <h2 title="h2 요소의 title 속성">속성 선택자</h2>
+    <p><a href="https://www.naver.com" target="_blank">네이버</a></p>
+    <p class="attr">속성명과 속성값이 모두 일치하는 요소를 선택자로 지정</p>
+</body>
+</html>
