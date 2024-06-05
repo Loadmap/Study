@@ -29,5 +29,4 @@ chatgpt
 
 chatgpt api 사용하기
 https://platform.openai.com/api-keys
-sk-proj-DadRru6T3trYDETuTvKHT3BlbkFJpB8prRrJwltGBBe86l2T/1
 
